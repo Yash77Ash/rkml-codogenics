@@ -40,6 +40,9 @@ const Navbar = () => {
           <h1 className={`m-0 ${isSticky ? 'text-primary' : ''}`}>RKML CODOGENICS</h1> {/* Apply dynamic class */}
         </Link>
 
+
+
+
         <button
           className="navbar-toggler"
           type="button"
