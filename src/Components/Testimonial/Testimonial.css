@@ -1,0 +1,33 @@
+.testimonial-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-out {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .slide-in-left {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  
+  .slide-in-right {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  
+  .testimonial-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-item:hover img {
+    transform: scale(1.1); /* Zoom in the image slightly on hover */
+  }
+  

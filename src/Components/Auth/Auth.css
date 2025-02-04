@@ -1,0 +1,194 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Hero Header */
+
+
+/* Authentication Box */
+.auth-box {
+    width: 420px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    padding: 40px !important;
+    margin: 50px auto !important;
+    text-align: center !important;
+}
+
+/* Title */
+.auth-title {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Form */
+form {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px !important;
+    text-align: left !important;
+}
+
+label {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #444 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* Input Fields */
+.form-control {
+    width: 100% !important;
+    padding: 12px 15px !important;
+    border: 2px solid #ddd !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2) !important;
+}
+
+/* Submit Button */
+.auth-btn {
+    width: 100% !important;
+    background: linear-gradient(to right, #FBA504, #FBA504) !important;
+    color: rgb(0, 0, 0) !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.auth-btn:hover {
+    background: linear-gradient(to right, #FBA504,#FBA504) !important;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* Toggle Text */
+.auth-toggle-text {
+    margin-top: 15px !important;
+    font-size: 0.95rem !important;
+    color: #555 !important;
+}
+
+.auth-toggle-text a {
+    color: #007bff !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.auth-toggle-text a:hover {
+    text-decoration: underline !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-box {
+        width: 90% !important;
+        padding: 30px !important;
+    }
+
+    .auth-title {
+        font-size: 1.8rem !important;
+    }
+
+    .form-control {
+        font-size: 1rem !important;
+    }
+
+    .auth-btn {
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+}
+.oauth-text {
+    margin-top: 15px !important;
+    font-size: 1rem !important;
+    color: #555 !important;
+    text-align: center !important;
+}
+
+.oauth-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 15px !important;
+}
+
+.oauth-btn {
+    width: 100% !important;
+    padding: 10px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.oauth-btn img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.google {
+    background: #db4437 !important;
+    color: white !important;
+}
+
+.github {
+    background: #24292e !important;
+    color: white !important;
+}
+
+.google:hover {
+    background: #c1351d !important;
+}
+
+.github:hover {
+    background: #181b1f !important;
+}
+.oauth-btn {
+    width: 100% !important;
+    padding: 10px !important;
+    border: 2px solid #ddd !important; /* Light gray border */
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    transition: all 0.3s ease !important;
+    background: white !important; /* White background */
+    color: #333 !important; /* Dark text color */
+}
+
+.oauth-btn img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.oauth-btn:hover {
+    background: #f5f5f5 !important; /* Light gray hover effect */
+}
