@@ -41,8 +41,6 @@ const Navbar = () => {
         </Link>
 
 
-
-
         <button
           className="navbar-toggler"
           type="button"
