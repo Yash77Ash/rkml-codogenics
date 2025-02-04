@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "next": "^14.0.0",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "counterup": "^1.0.2",
