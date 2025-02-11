@@ -4,11 +4,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Auth.css";
 
-const API_BASE_URL = "http://localhost:8080/auth"; // Your backend base URL
+const API_BASE_URL = "http://localhost:8080/auth"; // Backend API URL
 
 const Auth = ({ type }) => {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
   });
@@ -20,20 +20,10 @@ const Auth = ({ type }) => {
 
   // Validation function
   const validateForm = () => {
-    const { username, email, password } = formData;
+    const { email, password } = formData;
 
-    if (type === "signup") {
-      if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
-        toast.error("Please enter a valid email address.");
-        return false;
-      }
-    }
-
-    const usernameRegex = /^(?=.*[0-9])(?=.*[\W_]).{3,}$/;
-    if (!username.match(usernameRegex)) {
-      toast.error(
-        "Username must be at least 3 characters long and contain at least one number and one special character."
-      );
+    if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+      toast.error("Please enter a valid email address.");
       return false;
     }
 
@@ -56,19 +46,37 @@ const Auth = ({ type }) => {
     try {
       if (type === "signup") {
         const response = await axios.post(`${API_BASE_URL}/signup`, formData);
-        toast.success("Signup successful!");
-        console.log(response.data);
+        toast.success("Signup successful! Redirecting to login...");
+        console.log("Signup Response:", response.data);
+
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 2000);
       } else {
         const loginData = {
-          username: formData.username,
+          email: formData.email,
           password: formData.password,
         };
+
         const response = await axios.post(`${API_BASE_URL}/signin`, loginData);
-        localStorage.setItem("token", response.data.token);
-        toast.success("Login successful!");
-        console.log(response.data);
+
+        // Store JWT token
+        if (response.data.token) {
+          localStorage.setItem("token", response.data.token);
+          axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
+          toast.success("Login successful! Redirecting...");
+
+          setTimeout(() => {
+            window.location.href = "/dashboard"; // Change to your desired landing page
+          }, 2000);
+        } else {
+          toast.error("Invalid login response: No token received");
+        }
+
+        console.log("Login Response:", response.data);
       }
     } catch (error) {
+      console.error("API Error:", error.response);
       toast.error(error.response?.data?.message || "Something went wrong");
     }
   };
@@ -86,13 +94,13 @@ const Auth = ({ type }) => {
         <form onSubmit={handleSubmit}>
           {type === "signup" && (
             <div className="form-group">
-              <label htmlFor="formEmail">Email</label>
+              <label htmlFor="formName">Username</label>
               <input
-                type="email"
-                id="formEmail"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email}
+                type="text"
+                id="formName"
+                name="name"
+                placeholder="Enter your username"
+                value={formData.name}
                 onChange={handleChange}
                 required
                 className="form-control"
@@ -100,13 +108,13 @@ const Auth = ({ type }) => {
             </div>
           )}
           <div className="form-group">
-            <label htmlFor="formUsername">Username</label>
+            <label htmlFor="formEmail">Email</label>
             <input
-              type="text"
-              id="formUsername"
-              name="username"
-              placeholder="Enter your username"
-              value={formData.username}
+              type="email"
+              id="formEmail"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
               onChange={handleChange}
               required
               className="form-control"

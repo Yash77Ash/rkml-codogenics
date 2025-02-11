@@ -1,0 +1,266 @@
+/* SignIn Page Container */
+.signin-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* SignIn Card */
+.signin-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Breadcrumb */
+.signin-breadcrumb {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.signin-breadcrumb li {
+    margin-right: 5px;
+}
+
+.signin-breadcrumb li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.signin-breadcrumb .active {
+    font-weight: bold;
+}
+
+/* Input Fields */
+.signin-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Error Text */
+.signin-error-text {
+    color: red;
+    font-size: 14px;
+}
+
+/* Sign In Button */
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* Sign-Up Link */
+.signin-signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signin-signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Google Sign-In Button */
+.signin-google-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.signin-google-icon {
+    width: 20px;
+    margin-right: 10px;
+}
+/* Centered Card with Smooth Animation */
+.signin-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Keyframes for smooth animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated Button Styling */
+.signin-btn {
+    background-color: #FBA504;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.signin-btn:hover {
+    background-color: #d98c03; /* Slightly darker shade on hover */
+}
+
+/* Google Sign-in Button */
+.signin-google-btn {
+    margin-top: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.signin-google-btn:hover {
+    background: #f3f3f3;
+}
+
+/* Google Icon Styling */
+.signin-google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Error Message */
+.signin-error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* Centered Card with Smooth Animation */
+.signin-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.6s ease-in-out forwards;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Card */
+.signin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyframes for smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated Button Styling */
+.signin-btn {
+    background-color: #FBA504;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.signin-btn:hover {
+    background-color: #d98c03; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+/* Google Sign-in Button */
+.signin-google-btn {
+    margin-top: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Google Button Hover Effect */
+.signin-google-btn:hover {
+    background: #f3f3f3;
+    transform: scale(1.05);
+}
+
+/* Google Icon Styling */
+.signin-google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Error Message */
+.signin-error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+

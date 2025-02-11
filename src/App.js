@@ -20,7 +20,8 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import NotFoundPage from "./Components/404-page-not-found/404";  // Import the 404 page component
 import Loading from './Components/Loading/Loading'; // Import the Loading component
 import Careers from "./Components/Career/Career";
-import { Login, Signup } from  "./Components/Auth/Auth";
+import SignIn from "./Components/SignIn/signin";
+import SignUp from "./Components/SignUp/signup";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,8 +71,8 @@ function App() {
           <Route path="/testimonial" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/career" element={<Careers />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<SignIn/>} />
+          <Route path="/signup" element={<SignUp/>} />
 
           {/* Catch-all route for 404 Page */}
           <Route path="*" element={<NotFoundPage />} />
